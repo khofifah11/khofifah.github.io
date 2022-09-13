@@ -1,0 +1,33 @@
+body{
+			text-align: center;
+		}
+		table{
+			height: 300px;
+			width: 300px;
+			margin-left: 30%;
+		}
+		th{
+			background-color: blue;
+			color: whitesmoke;
+			height: 30px;
+		}
+td{
+	color: black;
+}
+td:hover{
+	background-color: dimgray;
+}
+.tombol-1{
+	height: 20px;
+    width:100px ;
+    color:white ;
+    cursor:pointer ;
+	background-color: blue;
+}
+.tombol-2{
+	cursor: pointer;
+	color: white;
+	width:100px ;
+	height: 20px;
+	background-color: red;
+}
