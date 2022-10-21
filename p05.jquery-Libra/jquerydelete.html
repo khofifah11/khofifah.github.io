@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="jquerydelete.css" />
+    <title>10 Best Friends</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </head>
+  <body>
+    <h2 class="judul">The Top 10 My Best Friend</h2>
+    <table align="center">
+      <tr class="judul-tabel">
+        <th>NIM</th>
+        <th>Nama</th>
+        <th>Alamat</th>
+        <th>Action</th>
+      </tr>
+      <tr id="baris__1">
+        <td>43210052</td>
+        <td class="nama" >Anisa Sabrina</td>
+        <td class="alamat">Kota Cirebon</td>
+        <td class="hapus" id="hapus__1">Hapus</td>
+      </tr>
+      <tr id="baris__2" class="baris">
+        <td>43210017</td>
+        <td class="nama" >Nurfadhilah Safitri</td>
+        <td class="alamat">Kota Cirebon</td>
+        <td class="hapus" id="Hapus__2">hapus</td>
+      </tr>
+      <tr id="baris__3" class="baris">
+        <td>43210050</td>
+        <td class="nama" >Dion Azhar Hidayat</td>
+        <td class="alamat">Kota Cirebon</td>
+        <td class="hapus" id="Hapus__3">hapus</td>
+      </tr>
+      <tr id="baris__4" class="baris">
+        <td>43210037</td>
+        <td class="nama" >Ririn</td>
+        <td class="alamat">Kota Cirebon</td>
+        <td class="hapus" id="Hapus__4">hapus</td>
+      </tr>
+      <tr id="baris__5" class="baris">
+        <td>43210044</td>
+        <td class="nama" >Kania Pramesya Anhar</td>
+        <td class="alamat">Kota Cirebon</td>
+        <td class="hapus" id="Hapus__5">hapus</td>
+      </tr>
+      <tr id="baris__6" class="baris">
+        <td>43210055</td>
+        <td class="nama" >Imanda Deasiva</td>
+        <td class="alamat">Kota Cirebon</td>
+        <td class="hapus" id="Hapus__6">hapus</td>
+      </tr>
+      <tr id="baris__7" class="baris">
+        <td>43210026</td>
+        <td class="nama" >Alief Lukman Haqiem</td>
+        <td class="alamat">Kota Cirebon</td>
+        <td class="hapus" id="Hapus__7">hapus</td>
+      </tr>
+      <tr id="baris__8" class="baris">
+        <td>43210028</td>
+        <td class="nama" >Ari Surahman</td>
+        <td class="alamat">Kota Cirebon</td>
+        <td class="hapus" id="Hapus__8">hapus</td>
+      </tr>
+      <tr id="baris__9" class="baris">
+        <td>43210030</td>
+        <td class="nama" >Ikhsan Fikry Fadillah</td>
+        <td class="alamat">Kota Cirebon</td>
+        <td class="hapus" id="Hapus__9">hapus</td>
+      </tr>
+      <tr id="baris__10" class="baris">
+        <td>43210049</td>
+        <td class="nama" >Khofifah</td>
+        <td class="alamat">Kota Cirebon</td>
+        <td class="hapus" id="Hapus__10">hapus</td>
+      </tr>
+  </table>
+  <br/>
+
+  <div id="tombol" class="tombol-back-bestie">
+    <a onclick="alert('kamu mau kembali ?')" href="../index.html"
+    >back to home</a>
+  </div>
+<script type="text/javascript">
+      $(document).ready(function(){
+
+    alert('ini adalah tabel nama terbaik di ikmi')
+
+    $('.nama').click(function(){
+
+      alert('ini adalah kolom nama')
+
+    let isi=$(this).text();
+
+    //alert(isi);
+
+    let isi2=prompt('ubah dengan nama: ',isi);
+    if (!isi2) return;
+
+    alert('nama berhasil diubah');
+
+    $(this).text(isi2);
+
+    //alert(isi2);
+  });
+    $('.alamat').click(function(){
+
+      alert('ini adalah kolom alamat')
+    let isi=$(this).text();
+
+    //alert(isi);
+    let isi3=prompt('ubah dengan alamat: ',isi);
+    if (!isi3) return;
+
+    alert('alamat berhasil diubah');
+
+    $(this).text(isi3);
+
+    //alert(isi3);
+  });
+    $('.hapus').click(function(){
+
+      //alert(2)
+      
+      let yakin=confirm('yakin mau hapus?');
+      if(!yakin)return;
+
+      let id=$(this).prop('id');
+
+      //alert(id);
+
+      let rid = id.split('__');
+      let baris_ke = rid[1];
+
+       //alert(baris_ke);
+      
+      $('#baris__'+baris_ke).slideUp()
+      
+      //alert('anda yakin?');
+    });
+  });
+  </script>
+      </body>
+</html>
