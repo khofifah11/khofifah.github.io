@@ -2,16 +2,52 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title> halaman pertama </title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-</head>	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css"/>
+	<title>Deacode - Templet HTML Basic</title>
+</head>
 <body>
-	<h1>Hello World HTML</h1>
-	<p>Saya Khofifah, NIM: 43210049</p>
-
-	<img src="khofifah.jpeg">
-
-<button onclick="alert('hello world javascrip')"> Hello javascript</button>
+    <section id="home">
+    	<div class="container">
+    		navigation bar star
+    		<div class="navwrapper">
+    			<ul class="navigation">
+    				<li class="nav">
+    					<a href="#home" class="navlink">HOME</a>
+    				</li>
+    				<li class="nav">
+    					<a href="#about" class="navlink">ABOUT</a>
+    				</li>
+    				<li class="nav">
+    					<a href="#contact" class="navlink">CONTACT</a>
+    				</li>
+    			</ul>
+    		</div>
+    		<div class="contentwrapper">
+    			<h1>HOME TEMPLET</h1>
+    		</div>
+    	</div>
+    </section>
+    <section id="about">
+    	<div class="container red">
+    		<div class="contentwrapper">
+    			<h1>ABOUT</h1>
+    		</div>
+    	</div>
+    </section>
+    <section id="contact">
+    	<div class="container blue">
+    		<div class="contentwrapper">
+    			<h1>CONTACT</h1>
+    		</div>
+    	</div>
+    </section>
+    <div class="top" onclick="goToTop()"></div>
+    <script>
+    	const goToTop = () = {
+    		return location.href="#home"
+    	}
+    </script>
 </body>
 </html>
